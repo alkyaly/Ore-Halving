@@ -1,6 +1,6 @@
 package io.github.alkyaly.orehalting.block;
 
-import io.github.alkyaly.orehalting.OreHalting;
+import io.github.alkyaly.orehalting.OreHalving;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
@@ -39,12 +39,12 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Random;
 
-public class OreHalterBlock extends BlockWithEntity {
+public class TheOneThatHalvesBlock extends BlockWithEntity {
 
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty ACTIVE = BooleanProperty.of("active");
 
-    public OreHalterBlock(Settings settings) {
+    public TheOneThatHalvesBlock(Settings settings) {
         super(settings);
         setDefaultState(getStateManager().getDefaultState().with(FACING, Direction.NORTH).with(ACTIVE, false));
     }
@@ -91,13 +91,13 @@ public class OreHalterBlock extends BlockWithEntity {
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new OreHalterBlockEntity(pos, state);
+        return new TheOneThatHalvesBlockEntity(pos, state);
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, OreHalting.ORE_HALTER_BLOCK_ENTITY, OreHalterBlockEntity::tick);
+        return checkType(type, OreHalving.THE_ONE_THAT_HALVES_BLOCK_ENTITY, TheOneThatHalvesBlockEntity::tick);
     }
 
     @Override
@@ -109,7 +109,7 @@ public class OreHalterBlock extends BlockWithEntity {
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (!state.isOf(newState.getBlock())) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof OreHalterBlockEntity) {
+            if (blockEntity instanceof TheOneThatHalvesBlockEntity) {
                 if (world instanceof ServerWorld) {
                     ItemScatterer.spawn(world, pos, (Inventory) blockEntity);
                 }

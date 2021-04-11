@@ -1,5 +1,5 @@
 {
-  "type": "orehalting:halting",
+  "type": "orehalting:halving",
   "ingredient": {
     "item": "minecraft:raw_copper"
   },

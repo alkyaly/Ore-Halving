@@ -1,7 +1,7 @@
 package io.github.alkyaly.orehalting.gui;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import io.github.alkyaly.orehalting.OreHalting;
+import io.github.alkyaly.orehalting.OreHalving;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
@@ -12,11 +12,11 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
-public class OreHalterScreen extends HandledScreen<OreHalterScreenHandler> {
+public class TheOneThatHalvesScreen extends HandledScreen<TheOneThatHalvesScreenHandler> {
 
-    private static final Identifier TEXTURE = OreHalting.id("textures/gui/container/ore_halter.png");
+    private static final Identifier TEXTURE = OreHalving.id("textures/gui/container/the_one_that_halves.png");
 
-    public OreHalterScreen(OreHalterScreenHandler handler, PlayerInventory inventory, Text title) {
+    public TheOneThatHalvesScreen(TheOneThatHalvesScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
 

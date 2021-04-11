@@ -1,8 +1,8 @@
 package io.github.alkyaly.orehalting.block;
 
-import io.github.alkyaly.orehalting.OreHalting;
-import io.github.alkyaly.orehalting.gui.OreHalterScreenHandler;
-import io.github.alkyaly.orehalting.recipe.HaltingRecipe;
+import io.github.alkyaly.orehalting.OreHalving;
+import io.github.alkyaly.orehalting.gui.TheOneThatHalvesScreenHandler;
+import io.github.alkyaly.orehalting.recipe.HalvingRecipe;
 import net.fabricmc.fabric.api.tag.TagRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -27,26 +27,26 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class OreHalterBlockEntity extends BlockEntity implements SidedInventory, NamedScreenHandlerFactory {
+public class TheOneThatHalvesBlockEntity extends BlockEntity implements SidedInventory, NamedScreenHandlerFactory {
 
     private int processingTime;
     public DefaultedList<ItemStack> inventory;
-    private final RecipeType<HaltingRecipe> recipeType;
+    private final RecipeType<HalvingRecipe> recipeType;
     private final PropertyDelegate propertyDelegate;
 
-    public OreHalterBlockEntity(BlockPos pos, BlockState state) {
-        super(OreHalting.ORE_HALTER_BLOCK_ENTITY, pos, state);
+    public TheOneThatHalvesBlockEntity(BlockPos pos, BlockState state) {
+        super(OreHalving.THE_ONE_THAT_HALVES_BLOCK_ENTITY, pos, state);
         this.inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
-        this.recipeType = OreHalting.HALTING_RECIPE;
+        this.recipeType = OreHalving.HALVING_RECIPE;
         this.propertyDelegate = new PropertyDelegate() {
             @Override
             public int get(int index) {
-                return OreHalterBlockEntity.this.processingTime;
+                return TheOneThatHalvesBlockEntity.this.processingTime;
             }
 
             @Override
             public void set(int index, int value) {
-                OreHalterBlockEntity.this.processingTime = value;
+                TheOneThatHalvesBlockEntity.this.processingTime = value;
             }
 
             @Override
@@ -57,7 +57,7 @@ public class OreHalterBlockEntity extends BlockEntity implements SidedInventory,
     }
 
 
-    public static void tick(World world, BlockPos pos, BlockState state, OreHalterBlockEntity blockEntity) {
+    public static void tick(World world, BlockPos pos, BlockState state, TheOneThatHalvesBlockEntity blockEntity) {
         if (world == null || world.isClient) return;
         if (blockEntity.isWorking()) {
             if (canCraft(blockEntity.inventory) && blockEntity.processingTime == 1) {
@@ -69,7 +69,7 @@ public class OreHalterBlockEntity extends BlockEntity implements SidedInventory,
                 markDirty(world, pos, state);
             }
 
-            state = state.with(OreHalterBlock.ACTIVE, true);
+            state = state.with(TheOneThatHalvesBlock.ACTIVE, true);
             world.setBlockState(pos, state, Block.NOTIFY_ALL);
             markDirty(world, pos, state);
 
@@ -81,7 +81,7 @@ public class OreHalterBlockEntity extends BlockEntity implements SidedInventory,
         }
 
         if (!blockEntity.isWorking()) {
-            state = state.with(OreHalterBlock.ACTIVE, false);
+            state = state.with(TheOneThatHalvesBlock.ACTIVE, false);
             world.setBlockState(pos, state, Block.NOTIFY_ALL);
             markDirty(world, pos, state);
         }
@@ -203,6 +203,6 @@ public class OreHalterBlockEntity extends BlockEntity implements SidedInventory,
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
-        return new OreHalterScreenHandler(syncId, inv, this, this.propertyDelegate);
+        return new TheOneThatHalvesScreenHandler(syncId, inv, this, this.propertyDelegate);
     }
 }

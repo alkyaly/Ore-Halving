@@ -1,6 +1,6 @@
 package io.github.alkyaly.orehalting.gui;
 
-import io.github.alkyaly.orehalting.OreHalting;
+import io.github.alkyaly.orehalting.OreHalving;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -12,17 +12,17 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.FurnaceOutputSlot;
 import net.minecraft.screen.slot.Slot;
 
-public class OreHalterScreenHandler extends ScreenHandler {
+public class TheOneThatHalvesScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
 
-    public OreHalterScreenHandler(int syncId, PlayerInventory playerInventory) {
+    public TheOneThatHalvesScreenHandler(int syncId, PlayerInventory playerInventory) {
         this(syncId, playerInventory, new SimpleInventory(2), new ArrayPropertyDelegate(1));
     }
 
 
-    public OreHalterScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate propertyDelegate) {
-        super(OreHalting.ORE_HALTER_SCREEN_HANDLER, syncId);
+    public TheOneThatHalvesScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate propertyDelegate) {
+        super(OreHalving.ORE_HALTER_SCREEN_HANDLER, syncId);
         checkSize(inventory, 2);
         checkDataCount(propertyDelegate, 1);
         this.inventory = inventory;

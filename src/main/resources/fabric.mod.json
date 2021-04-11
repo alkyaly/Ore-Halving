@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
-  "id": "orehalting",
+  "id": "orehalving",
   "version": "${version}",
-  "name": "Ore Halting",
+  "name": "Ore Halving",
   "description": ".",
-  "icon": "assets/orehalting/icon.png",
+  "icon": "assets/orehalving/icon.png",
   "authors": [
     "alkyaLy"
   ],
   "contact": {
-    "sources": "https://github.com/alkyaly/Ore-Halting",
-    "issues": "https://github.com/alkyaly/Ore-Halting/issues"
+    "sources": "https://github.com/alkyaly/Ore-Halving",
+    "issues": "https://github.com/alkyaly/Ore-Halving/issues"
   },
 
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.alkyaly.orehalting.OreHalting"
+      "io.github.alkyaly.orehalting.OreHalving"
     ],
     "client": [
-      "io.github.alkyaly.orehalting.client.OreHaltingClient"
+      "io.github.alkyaly.orehalting.client.OreHalvingClient"
     ]
   },
 
