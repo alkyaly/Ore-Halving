@@ -1,6 +1,6 @@
-package io.github.alkyaly.orehalting.gui;
+package io.github.alkyaly.orehalving.gui;
 
-import io.github.alkyaly.orehalting.OreHalving;
+import io.github.alkyaly.orehalving.OreHalving;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;

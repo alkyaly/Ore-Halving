@@ -1,6 +1,6 @@
-package io.github.alkyaly.orehalting.block;
+package io.github.alkyaly.orehalving.block;
 
-import io.github.alkyaly.orehalting.OreHalving;
+import io.github.alkyaly.orehalving.OreHalving;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;

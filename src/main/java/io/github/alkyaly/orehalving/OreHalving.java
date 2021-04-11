@@ -1,9 +1,9 @@
-package io.github.alkyaly.orehalting;
+package io.github.alkyaly.orehalving;
 
-import io.github.alkyaly.orehalting.block.TheOneThatHalvesBlock;
-import io.github.alkyaly.orehalting.block.TheOneThatHalvesBlockEntity;
-import io.github.alkyaly.orehalting.gui.TheOneThatHalvesScreenHandler;
-import io.github.alkyaly.orehalting.recipe.HalvingRecipe;
+import io.github.alkyaly.orehalving.block.TheOneThatHalvesBlock;
+import io.github.alkyaly.orehalving.block.TheOneThatHalvesBlockEntity;
+import io.github.alkyaly.orehalving.gui.TheOneThatHalvesScreenHandler;
+import io.github.alkyaly.orehalving.recipe.HalvingRecipe;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;

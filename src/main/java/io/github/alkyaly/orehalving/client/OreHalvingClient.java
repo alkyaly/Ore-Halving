@@ -1,7 +1,7 @@
-package io.github.alkyaly.orehalting.client;
+package io.github.alkyaly.orehalving.client;
 
-import io.github.alkyaly.orehalting.OreHalving;
-import io.github.alkyaly.orehalting.gui.TheOneThatHalvesScreen;
+import io.github.alkyaly.orehalving.OreHalving;
+import io.github.alkyaly.orehalving.gui.TheOneThatHalvesScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 

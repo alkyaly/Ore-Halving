@@ -1,8 +1,8 @@
-package io.github.alkyaly.orehalting.block;
+package io.github.alkyaly.orehalving.block;
 
-import io.github.alkyaly.orehalting.OreHalving;
-import io.github.alkyaly.orehalting.gui.TheOneThatHalvesScreenHandler;
-import io.github.alkyaly.orehalting.recipe.HalvingRecipe;
+import io.github.alkyaly.orehalving.OreHalving;
+import io.github.alkyaly.orehalving.gui.TheOneThatHalvesScreenHandler;
+import io.github.alkyaly.orehalving.recipe.HalvingRecipe;
 import net.fabricmc.fabric.api.tag.TagRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

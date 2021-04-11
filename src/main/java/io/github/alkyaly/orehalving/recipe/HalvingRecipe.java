@@ -1,8 +1,8 @@
-package io.github.alkyaly.orehalting.recipe;
+package io.github.alkyaly.orehalving.recipe;
 
 import com.google.gson.JsonObject;
-import io.github.alkyaly.orehalting.OreHalving;
-import io.github.alkyaly.orehalting.block.TheOneThatHalvesBlockEntity;
+import io.github.alkyaly.orehalving.OreHalving;
+import io.github.alkyaly.orehalving.block.TheOneThatHalvesBlockEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.Ingredient;

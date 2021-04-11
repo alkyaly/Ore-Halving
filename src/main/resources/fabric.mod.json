@@ -17,10 +17,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.alkyaly.orehalting.OreHalving"
+      "io.github.alkyaly.orehalving.OreHalving"
     ],
     "client": [
-      "io.github.alkyaly.orehalting.client.OreHalvingClient"
+      "io.github.alkyaly.orehalving.client.OreHalvingClient"
     ]
   },
 

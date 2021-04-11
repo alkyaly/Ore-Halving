@@ -1,7 +1,7 @@
-package io.github.alkyaly.orehalting.gui;
+package io.github.alkyaly.orehalving.gui;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import io.github.alkyaly.orehalting.OreHalving;
+import io.github.alkyaly.orehalving.OreHalving;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
