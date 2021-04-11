@@ -1,5 +1,5 @@
 {
-  "type": "orehalting:halving",
+  "type": "orehalving:halving",
   "ingredient": {
     "item": "minecraft:raw_gold"
   },

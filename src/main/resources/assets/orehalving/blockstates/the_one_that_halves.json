@@ -1,33 +1,33 @@
 {
   "variants": {
     "facing=east,active=false": {
-      "model": "orehalting:block/the_one_that_halves",
+      "model": "orehalving:block/the_one_that_halves",
       "y": 90
     },
     "facing=east,active=true": {
-      "model": "orehalting:block/the_one_that_halves_on",
+      "model": "orehalving:block/the_one_that_halves_on",
       "y": 90
     },
     "facing=north,active=false": {
-      "model": "orehalting:block/the_one_that_halves"
+      "model": "orehalving:block/the_one_that_halves"
     },
     "facing=north,active=true": {
-      "model": "orehalting:block/the_one_that_halves_on"
+      "model": "orehalving:block/the_one_that_halves_on"
     },
     "facing=south,active=false": {
-      "model": "orehalting:block/the_one_that_halves",
+      "model": "orehalving:block/the_one_that_halves",
       "y": 180
     },
     "facing=south,active=true": {
-      "model": "orehalting:block/the_one_that_halves_on",
+      "model": "orehalving:block/the_one_that_halves_on",
       "y": 180
     },
     "facing=west,active=false": {
-      "model": "orehalting:block/the_one_that_halves",
+      "model": "orehalving:block/the_one_that_halves",
       "y": 270
     },
     "facing=west,active=true": {
-      "model": "orehalting:block/the_one_that_halves_on",
+      "model": "orehalving:block/the_one_that_halves_on",
       "y": 270
     }
   }

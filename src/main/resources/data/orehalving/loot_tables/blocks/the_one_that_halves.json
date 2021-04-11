@@ -13,7 +13,7 @@
               "source": "block_entity"
             }
           ],
-          "name": "orehalting:ore_halter"
+          "name": "orehalving:the_one_that_halves"
         }
       ],
       "conditions": [

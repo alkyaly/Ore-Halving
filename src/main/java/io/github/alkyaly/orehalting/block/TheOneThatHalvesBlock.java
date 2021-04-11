@@ -102,7 +102,7 @@ public class TheOneThatHalvesBlock extends BlockWithEntity {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        tooltip.add(new TranslatableText("tooltip.orehalting.why"));
+        tooltip.add(new TranslatableText("tooltip.orehalving.why"));
     }
 
     @Override

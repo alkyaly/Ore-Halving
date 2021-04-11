@@ -41,10 +41,11 @@ public class OreHalving implements ModInitializer {
         }
     };
     public static final HalvingRecipe.HalvingRecipeSerializer HALVING_RECIPE_SERIALIZER = new HalvingRecipe.HalvingRecipeSerializer();
-    public static final Block THE_ONE_THAT_HALVES_BLOCK = new TheOneThatHalvesBlock(FabricBlockSettings.of(Material.METAL).strength(2f).sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES, 1).breakByHand(false));
+    public static final Block THE_ONE_THAT_HALVES_BLOCK = new TheOneThatHalvesBlock(FabricBlockSettings.of(Material.METAL).strength(3.5f).sounds(BlockSoundGroup.STONE)
+            .breakByTool(FabricToolTags.PICKAXES, 1).breakByHand(false).luminance(state -> state.get(TheOneThatHalvesBlock.ACTIVE) ? 15 : 0));
     public static final BlockEntityType<TheOneThatHalvesBlockEntity> THE_ONE_THAT_HALVES_BLOCK_ENTITY = FabricBlockEntityTypeBuilder.create(
             TheOneThatHalvesBlockEntity::new, THE_ONE_THAT_HALVES_BLOCK).build(null);
-    public static final ScreenHandlerType<TheOneThatHalvesScreenHandler> ORE_HALTER_SCREEN_HANDLER;
+    public static final ScreenHandlerType<TheOneThatHalvesScreenHandler> THE_ONE_THAT_HALVES_SCREEN_HANDLER;
 
     @Override
     public void onInitialize() {
@@ -57,6 +58,6 @@ public class OreHalving implements ModInitializer {
     }
 
     static {
-        ORE_HALTER_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(id("the_one_that_halves"), TheOneThatHalvesScreenHandler::new);
+        THE_ONE_THAT_HALVES_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(id("the_one_that_halves"), TheOneThatHalvesScreenHandler::new);
     }
 }

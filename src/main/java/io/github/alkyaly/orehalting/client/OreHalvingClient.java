@@ -8,6 +8,6 @@ import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 public class OreHalvingClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        ScreenRegistry.register(OreHalving.ORE_HALTER_SCREEN_HANDLER, TheOneThatHalvesScreen::new);
+        ScreenRegistry.register(OreHalving.THE_ONE_THAT_HALVES_SCREEN_HANDLER, TheOneThatHalvesScreen::new);
     }
 }

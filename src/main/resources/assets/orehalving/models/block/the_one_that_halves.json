@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/orientable",
   "textures": {
-    "top": "orehalting:block/the_one_that_halves_top",
-    "front": "orehalting:block/the_one_that_halves_front",
-    "side": "orehalting:block/the_one_that_halves_side"
+    "top": "orehalving:block/the_one_that_halves_top",
+    "front": "orehalving:block/the_one_that_halves_front",
+    "side": "orehalving:block/the_one_that_halves_side"
   }
 }

@@ -22,7 +22,7 @@ public class TheOneThatHalvesScreenHandler extends ScreenHandler {
 
 
     public TheOneThatHalvesScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate propertyDelegate) {
-        super(OreHalving.ORE_HALTER_SCREEN_HANDLER, syncId);
+        super(OreHalving.THE_ONE_THAT_HALVES_SCREEN_HANDLER, syncId);
         checkSize(inventory, 2);
         checkDataCount(propertyDelegate, 1);
         this.inventory = inventory;
