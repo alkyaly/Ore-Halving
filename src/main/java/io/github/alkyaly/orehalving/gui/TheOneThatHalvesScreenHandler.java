@@ -79,8 +79,4 @@ public class TheOneThatHalvesScreenHandler extends ScreenHandler {
     public int processingTime() {
         return this.propertyDelegate.get(0);
     }
-
-    public boolean isWorking() {
-        return this.propertyDelegate.get(0) > 0;
-    }
 }
