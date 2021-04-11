@@ -1,0 +1,7 @@
+{
+  "type": "orehalting:halting",
+  "ingredient": {
+    "item": "minecraft:raw_gold"
+  },
+  "result": "minecraft:gold_ingot"
+}

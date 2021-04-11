@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "orehalting:block/ore_halter_top",
+    "front": "orehalting:block/ore_halter_front",
+    "side": "orehalting:block/ore_halter_side"
+  }
+}

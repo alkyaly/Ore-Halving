@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "UWU",
+    "CFC",
+    "UWU"
+  ],
+  "key": {
+    "W": {
+      "tag": "c:raw_ingots"
+    },
+    "C": {
+      "item": "minecraft:clay"
+    },
+    "U": {
+      "item": "minecraft:iron_ingot"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    }
+  },
+  "result": {
+    "item": "orehalting:ore_halter"
+  }
+}
+
