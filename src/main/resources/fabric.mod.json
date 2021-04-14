@@ -3,7 +3,7 @@
   "id": "orehalving",
   "version": "${version}",
   "name": "Ore Halving",
-  "description": ".",
+  "description": "Ore processing but it's funny!1!11!!",
   "icon": "assets/orehalving/icon.png",
   "authors": [
     "alkyaLy"
@@ -27,6 +27,6 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.17-alpha.21.14.a"
+    "minecraft": ">=1.17-alpha.21.14.a"
   }
 }
