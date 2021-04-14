@@ -73,14 +73,16 @@ public class TheOneThatHalvesBlockEntity extends BlockEntity implements SidedInv
             world.setBlockState(pos, state, Block.NOTIFY_ALL);
             markDirty(world, pos, state);
 
+            if (!world.isReceivingRedstonePower(pos)) {
+                blockEntity.processingTime--;
+            }
 
-            blockEntity.processingTime--;
         } else if (canCraft(blockEntity.inventory)) {
             blockEntity.processingTime = 200;
             markDirty(world, pos, state);
         }
 
-        if (!blockEntity.isWorking()) {
+        if (!blockEntity.isWorking() && !canCraft(blockEntity.inventory)) {
             state = state.with(TheOneThatHalvesBlock.ACTIVE, false);
             world.setBlockState(pos, state, Block.NOTIFY_ALL);
             markDirty(world, pos, state);
@@ -104,12 +106,12 @@ public class TheOneThatHalvesBlockEntity extends BlockEntity implements SidedInv
     }
 
     public boolean isWorking() {
-        return processingTime > 0;
+        return processingTime >= 0;
     }
 
     public static boolean canCraft(DefaultedList<ItemStack> inventory) {
         ItemStack stack = inventory.get(1);
-        return stack.getCount() >= 2 && stack.isIn(TagRegistry.item(new Identifier("c", "raw_ingots")));
+        return stack.getCount() >= 2 && stack.isIn(TagRegistry.item(new Identifier("c", "raw_ores")));
     }
 
     public static void craft(Recipe<?> recipe, DefaultedList<ItemStack> inventory) {
@@ -140,7 +142,7 @@ public class TheOneThatHalvesBlockEntity extends BlockEntity implements SidedInv
 
     @Override
     public boolean canInsert(int slot, ItemStack stack, @Nullable Direction dir) {
-        return stack.isIn(TagRegistry.item(new Identifier("c", "raw_ingots")));
+        return stack.isIn(TagRegistry.item(new Identifier("c", "raw_ores")));
     }
 
     @Override
@@ -181,8 +183,10 @@ public class TheOneThatHalvesBlockEntity extends BlockEntity implements SidedInv
         }
     }
 
+    
     @Override
     public boolean canPlayerUse(PlayerEntity player) {
+        //noinspection ConstantConditions
         if (this.world.getBlockEntity(this.pos) != this) {
             return false;
         } else {
